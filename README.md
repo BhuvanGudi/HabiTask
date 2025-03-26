@@ -66,6 +66,97 @@ This ensures the focus is purely on **frontend development** (HTML, CSS, and Rea
 
 ---
 
+```
+property-marketplace/
+│
+├── index.html                  # Landing page
+├── auth/                       # Authentication pages
+│   ├── login.html
+│   ├── signup.html
+│   ├── auth.css
+│   └── auth.js
+│
+├── dashboard/                  # User dashboards
+│   ├── owner/
+│   │   ├── index.html          # Owner dashboard
+│   │   ├── dashboard.css
+│   │   └── dashboard.js
+│   └── worker/
+│       ├── index.html          # Worker dashboard
+│       ├── dashboard.css
+│       └── dashboard.js
+│
+├── listings/                   # Job listings
+│   ├── index.html
+│   ├── listings.css
+│   └── listings.js
+│
+├── profiles/                   # User profiles
+│   ├── owner/
+│   │   ├── index.html
+│   │   ├── profile.css
+│   │   └── profile.js
+│   └── worker/
+│       ├── index.html
+│       ├── profile.css
+│       └── profile.js
+│
+├── notifications/              # Notifications
+│   ├── index.html
+│   ├── notifications.css
+│   └── notifications.js
+│
+├── assets/
+│   ├── css/
+│   │   ├── styles.css          # Global styles
+│   │   ├── components.css      # Reusable components
+│   │   └── utilities.css       # Utility classes
+│   ├── js/
+│   │   ├── main.js             # Global JavaScript
+│   │   ├── helpers.js          # Helper functions
+│   │   └── theme.js            # Dark mode toggle
+│   ├── images/                 # All images
+│   └── icons/                  # Icon set
+│
+└── README.md                   # Project documentation
+```
+
+---
+
+
+Key Features of This Structure:
+Modular Organization: Each major section has its own folder with dedicated HTML, CSS, and JS files.
+
+Separation of Concerns:
+
+Global styles and scripts in the assets folder
+
+Page-specific styles and scripts with their respective pages
+
+Scalability: Easy to add new pages or sections without cluttering.
+
+Reusability:
+
+components.css for reusable UI components
+
+utilities.css for utility classes
+
+helpers.js for shared functions
+
+No Dependencies: Pure HTML, CSS, and JavaScript as requested.
+
+Implementation Notes:
+For dark mode, you'd use the theme.js to handle the toggle and apply classes to the root element.
+
+All mock data can be stored in the respective JavaScript files (or in a separate mockData.js if you prefer).
+
+Navigation between pages would be handled with standard anchor tags since we're not using a SPA framework.
+
+For responsive design, use media queries in each CSS file or in the global styles.css.
+
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
