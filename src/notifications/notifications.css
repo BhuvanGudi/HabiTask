@@ -1,0 +1,117 @@
+/* Reuse dashboard styles */
+@import url('../dashboard/worker/dashboard.css');
+
+.notifications-content {
+    padding: 2rem;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.notification-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.group-title {
+    font-size: 1rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.notification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.notification-card.unread {
+    background-color: #F0F7FF;
+    border-left: 3px solid var(--primary-color);
+}
+
+.notification-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--gray-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.notification-content p {
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.notification-time {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+}
+
+.notification-action {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.notification-card:hover .notification-action {
+    opacity: 1;
+}
+
+.notification-action:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notifications-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .mark-all-read {
+        width: 100%;
+    }
+}

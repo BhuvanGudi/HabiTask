@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings | PropertyPro</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/utilities.css">
+    <link rel="stylesheet" href="listings.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar (same as dashboard) -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../dashboard/owner/index.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Find Jobs</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💼</span>
+                <span class="nav-text">My Jobs</span>
+            </a>
+            <a href="../notifications/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="../profiles/worker/index.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <label>
+                    <input type="text" placeholder="Search jobs...">
+                </label>
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-counter">3</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../assets/images/users/worker-avatar.jpg" alt="User Avatar">
+                    <span>Alex Handyman</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="listings-content">
+            <div class="listings-header">
+                <h1>Available Jobs</h1>
+                <div class="listings-actions">
+                    <div class="filter-dropdown">
+                        <button class="btn btn-outline filter-btn">
+                            <span class="filter-icon">⚙️</span>
+                            Filters
+                        </button>
+                        <div class="filter-options">
+                            <div class="filter-group">
+                                <h4>Job Type</h4>
+                                <div class="filter-checkboxes">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Plumbing
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Electrical
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Painting
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Distance</h4>
+                                <label>
+                                    <select class="distance-select">
+                                        <option>Within 5 miles</option>
+                                        <option>Within 10 miles</option>
+                                        <option>Within 25 miles</option>
+                                        <option>Any distance</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="filter-group">
+                                <h4>Pay Range</h4>
+                                <div class="range-inputs">
+                                    <label>
+                                        <input type="number" placeholder="Min" min="0">
+                                    </label>
+                                    <span>to</span>
+                                    <label>
+                                        <input type="number" placeholder="Max" min="0">
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary apply-filters">Apply Filters</button>
+                        </div>
+                    </div>
+                    <div class="sort-dropdown">
+                        <button class="btn btn-outline sort-btn">
+                            <span class="sort-icon">🔽</span>
+                            Sort By: Newest
+                        </button>
+                        <div class="sort-options">
+                            <a href="#" class="sort-option active">Newest First</a>
+                            <a href="#" class="sort-option">Highest Paying</a>
+                            <a href="#" class="sort-option">Nearest</a>
+                            <a href="#" class="sort-option">Urgent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listings-grid">
+                <!-- Job Listing 1 -->
+                <div class="listing-card featured">
+                    <div class="listing-badge">Featured</div>
+                    <div class="listing-header">
+                        <h3>Bathroom Remodel</h3>
+                        <span class="listing-price">$1,200 - $1,500</span>
+                    </div>
+                    <div class="listing-meta">
+                        <span class="listing-location">📍 3.2 miles away | 789 Pine Rd</span>
+                        <span class="listing-time">Posted: 1 day ago</span>
+                    </div>
+                    <p class="listing-description">Full bathroom remodel including tiling, plumbing fixtures replacement, and painting. Must have 3+ years experience.</p>
+                    <div class="listing-footer">
+                        <div class="listing-tags">
+                            <span class="tag">Plumbing</span>
+                            <span class="tag">Tiling</span>
+                            <span class="tag">Painting</span>
+                        </div>
+                        <div class="listing-actions">
+                            <button class="btn btn-sm btn-outline">View Details</button>
+                            <button class="btn btn-sm btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Listing 2 -->
+                <div class="listing-card urgent">
+                    <div class="listing-badge">Urgent</div>
+                    <div class="listing-header">
+                        <h3>Electrical Wiring</h3>
+                        <span class="listing-price">$850 fixed</span>
+                    </div>
+                    <div class="listing-meta">
+                        <span class="listing-location">📍 1.5 miles away | 321 Elm St</span>
+                        <span class="listing-time">Posted: 3 hours ago</span>
+                    </div>
+                    <p class="listing-description">Rewiring kitchen outlets and installing new light fixtures. Must be licensed electrician.</p>
+                    <div class="listing-footer">
+                        <div class="listing-tags">
+                            <span class="tag">Electrical</span>
+                            <span class="tag">Wiring</span>
+                        </div>
+                        <div class="listing-actions">
+                            <button class="btn btn-sm btn-outline">View Details</button>
+                            <button class="btn btn-sm btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Listing 3 -->
+                <div class="listing-card">
+                    <div class="listing-header">
+                        <h3>Kitchen Cabinet Installation</h3>
+                        <span class="listing-price">$65/hour</span>
+                    </div>
+                    <div class="listing-meta">
+                        <span class="listing-location">📍 5.7 miles away | 456 Oak Ave</span>
+                        <span class="listing-time">Posted: 2 days ago</span>
+                    </div>
+                    <p class="listing-description">Install pre-assembled kitchen cabinets. Tools provided. 2 day project estimated.</p>
+                    <div class="listing-footer">
+                        <div class="listing-tags">
+                            <span class="tag">Carpentry</span>
+                            <span class="tag">Installation</span>
+                        </div>
+                        <div class="listing-actions">
+                            <button class="btn btn-sm btn-outline">View Details</button>
+                            <button class="btn btn-sm btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Listing 4 -->
+                <div class="listing-card">
+                    <div class="listing-header">
+                        <h3>Deep Cleaning Service</h3>
+                        <span class="listing-price">$300</span>
+                    </div>
+                    <div class="listing-meta">
+                        <span class="listing-location">📍 2.1 miles away | 123 Main St</span>
+                        <span class="listing-time">Posted: 1 day ago</span>
+                    </div>
+                    <p class="listing-description">Deep cleaning for 3-bedroom apartment before new tenants move in. Must provide own supplies.</p>
+                    <div class="listing-footer">
+                        <div class="listing-tags">
+                            <span class="tag">Cleaning</span>
+                        </div>
+                        <div class="listing-actions">
+                            <button class="btn btn-sm btn-outline">View Details</button>
+                            <button class="btn btn-sm btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-outline" disabled>Previous</button>
+                <button class="btn btn-outline active">1</button>
+                <button class="btn btn-outline">2</button>
+                <button class="btn btn-outline">3</button>
+                <button class="btn btn-outline">Next</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="listings.js"></script>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>
