@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | PropertyPro</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/utilities.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <a href="../index.html" class="logo">Property<span>Pro</span></a>
+            <h1>Create Your Account</h1>
+            <p>Join thousands of property owners and workers</p>
+
+            <div class="user-type-toggle">
+                <button class="btn-toggle active" data-user-type="owner">I'm a Property Owner</button>
+                <button class="btn-toggle" data-user-type="worker">I'm a Worker</button>
+            </div>
+        </div>
+
+        <form id="signupForm" class="auth-form">
+            <div class="form-group">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" required placeholder="Enter your full name">
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" required placeholder="Enter your email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" required placeholder="Create a password">
+                <div class="password-strength">
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-bar"></span>
+                    <span class="strength-text">Password strength</span>
+                </div>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="signupConfirmPassword">Confirm Password</label>
+                <input type="password" id="signupConfirmPassword" required placeholder="Confirm your password">
+                <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+
+            <div class="form-group" id="ownerFields">
+                <label for="propertyType">Property Type (Owners)</label>
+                <select id="propertyType">
+                    <option value="">Select property type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+            </div>
+
+            <div class="form-group hidden" id="workerFields">
+<!--                <label for="workerSkills">Skills (Workers)</label>-->
+                <div class="skills-container">
+                    <div class="skill-tag">
+                        <input type="checkbox" id="plumbing" name="skills">
+                        <label for="plumbing">Plumbing</label>
+                    </div>
+                    <div class="skill-tag">
+                        <input type="checkbox" id="electrical" name="skills">
+                        <label for="electrical">Electrical</label>
+                    </div>
+                    <div class="skill-tag">
+                        <input type="checkbox" id="cleaning" name="skills">
+                        <label for="cleaning">Cleaning</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="termsAgreement" required>
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+
+    <div class="auth-image">
+        <img src="../assets/images/auth/signup-image.jpg" alt="Happy property professionals">
+    </div>
+</div>
+
+<script src="auth.js"></script>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>
