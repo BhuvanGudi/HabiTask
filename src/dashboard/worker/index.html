@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Dashboard | PropertyPro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../listings/index.html" class="nav-item">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Find Jobs</span>
+            </a>
+            <a href="../listings/index.html" class="nav-item">
+                <span class="nav-icon">💼</span>
+                <span class="nav-text">My Jobs</span>
+            </a>
+            <a href="../notifications/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">5</span>
+            </a>
+            <a href="../profiles/worker/index.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <div class="search-bar">
+                <input type="text" placeholder="Search jobs...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-counter">5</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/worker-avatar.jpg" alt="User Avatar">
+                    <span>Alex Handyman</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <h1 class="page-title">Worker Dashboard</h1>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-info">
+                        <h3>8</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>$2,450</h3>
+                        <p>Earnings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>42</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3>4.8</h3>
+                        <p>Rating</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Jobs -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Available Jobs Near You</h2>
+                    <a href="../listings/index.html" class="btn btn-outline">View All</a>
+                </div>
+
+                <div class="jobs-list">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Bathroom Remodel</h3>
+                            <span class="job-price">$1,200</span>
+                        </div>
+                        <p class="job-location">📍 3.2 miles away | 789 Pine Rd</p>
+                        <p class="job-description">Full bathroom remodel including tiling, plumbing, and painting</p>
+                        <div class="job-footer">
+                            <span class="job-date">Posted: 1 day ago</span>
+                            <div class="job-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <button class="btn btn-sm btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Electrical Wiring</h3>
+                            <span class="job-price">$850</span>
+                        </div>
+                        <p class="job-location">📍 1.5 miles away | 321 Elm St</p>
+                        <p class="job-description">Rewiring kitchen outlets and installing new light fixtures</p>
+                        <div class="job-footer">
+                            <span class="job-date">Posted: 3 hours ago</span>
+                            <div class="job-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <button class="btn btn-sm btn-primary">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Schedule -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Today's Schedule</h2>
+                    <a href="#" class="btn btn-outline">Full Calendar</a>
+                </div>
+
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 AM - 11:30 AM</div>
+                        <div class="schedule-details">
+                            <h3>Kitchen Plumbing Repair</h3>
+                            <p>123 Main St, Apartment 4B</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline">Details</button>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-time">2:00 PM - 4:00 PM</div>
+                        <div class="schedule-details">
+                            <h3>Painting Consultation</h3>
+                            <p>456 Oak Ave, Unit 2</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline">Details</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="dashboard.js"></script>
+<script src="../../assets/js/theme.js"></script>
+</body>
+</html>

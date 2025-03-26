@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard | PropertyPro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../listings/index.html" class="nav-item">
+                <span class="nav-icon">🏘️</span>
+                <span class="nav-text">My Properties</span>
+            </a>
+            <a href="../listings/index.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Job Requests</span>
+            </a>
+            <a href="../notifications/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="../profiles/owner/index.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-counter">3</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/owner-avatar.jpg" alt="User Avatar">
+                    <span>John PropertyOwner</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <h1 class="page-title">Owner Dashboard</h1>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Properties</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>28</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Messages</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Jobs -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Recent Job Requests</h2>
+                    <a href="../listings/index.html" class="btn btn-outline">View All</a>
+                </div>
+
+                <div class="jobs-list">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Plumbing Repair</h3>
+                            <span class="job-status pending">Pending</span>
+                        </div>
+                        <p class="job-property">123 Main St, Apartment 4B</p>
+                        <p class="job-description">Kitchen sink leaking and needs pipe replacement</p>
+                        <div class="job-footer">
+                            <span class="job-date">Posted: 2 days ago</span>
+                            <div class="job-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3>Painting Service</h3>
+                            <span class="job-status in-progress">In Progress</span>
+                        </div>
+                        <p class="job-property">456 Oak Ave, Unit 2</p>
+                        <p class="job-description">Whole apartment repainting - 3 bedrooms</p>
+                        <div class="job-footer">
+                            <span class="job-date">Started: 1 week ago</span>
+                            <div class="job-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Workers -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Recommended Workers</h2>
+                    <a href="../listings/index.html" class="btn btn-outline">Browse All</a>
+                </div>
+
+                <div class="workers-grid">
+                    <div class="worker-card">
+                        <img src="../../assets/images/users/worker1.jpg" alt="Worker Avatar">
+                        <h3>Mike Plumber</h3>
+                        <div class="worker-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(24 reviews)</span>
+                        </div>
+                        <p class="worker-skills">Plumbing, Pipe Repair</p>
+                        <button class="btn btn-sm btn-primary">Hire Now</button>
+                    </div>
+
+                    <div class="worker-card">
+                        <img src="../../assets/images/users/worker2.jpg" alt="Worker Avatar">
+                        <h3>Sarah Electrician</h3>
+                        <div class="worker-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(18 reviews)</span>
+                        </div>
+                        <p class="worker-skills">Electrical, Wiring</p>
+                        <button class="btn btn-sm btn-primary">Hire Now</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="dashboard.js"></script>
+<script src="../../assets/js/theme.js"></script>
+</body>
+</html>
