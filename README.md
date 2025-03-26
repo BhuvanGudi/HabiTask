@@ -115,44 +115,159 @@ property-marketplace/
 │   │   ├── main.js             # Global JavaScript
 │   │   ├── helpers.js          # Helper functions
 │   │   └── theme.js            # Dark mode toggle
-│   ├── images/                 # All images
-│   └── icons/                  # Icon set
+│   ├── images/
+│   │   ├── hero/
+│   │   ├── properties/
+│   │   ├── services/
+│   │   ├── users/
+│   │   └── ui/
+│   └── icons/
+│       ├── navigation/
+│       ├── social/
+│       ├── actions/
+│       └── status/
 │
 └── README.md                   # Project documentation
 ```
 
+
+## 1. Images Folder (`assets/images/`)
+
+### Essential Images:
+1. **Hero Image** (`hero-image.png`)
+   - Purpose: Main visual for the homepage hero section
+   - Suggested: Illustration or photo showing property owners and workers collaborating
+
+2. **Service Category Icons**:
+   - `plumbing.png` - For plumbing services
+   - `electrical.png` - For electrical work
+   - `cleaning.png` - For cleaning services
+   - `carpentry.png` - For carpentry work
+   - `landscaping.png` - For gardening/landscaping
+   - `painting.png` - For painting services
+
+3. **User Placeholders**:
+   - `user-owner.png` - Default property owner avatar
+   - `user-worker.png` - Default worker avatar
+
+4. **Property Types**:
+   - `house.png` - Single family home
+   - `apartment.png` - Apartment building
+   - `commercial.png` - Commercial property
+   - `vacation.png` - Vacation rental
+
+5. **Miscellaneous**:
+   - `how-it-works.png` - Visual for how it works a section
+   - `feature-image.png` - Supporting image for a features section
+   - `testimonial-bg.jpg` - Background for a testimonials section
+   - `cta-bg.jpg` - Background for a call-to-action section
+
+## 2. Icons Folder (`assets/icons/`)
+
+### Essential Icons (SVG or PNG):
+1. **Navigation Icons**:
+   - `menu.svg` - Hamburger menu icon
+   - `close.svg` - Close icon for mobile menu
+
+2. **User Interface Icons**:
+   - `search.svg` - Search icon
+   - `filter.svg` - Filter icon
+   - `location.svg` - Location pin
+   - `calendar.svg` - Calendar/scheduling
+   - `star.svg` - Ratings/featured
+   - `star-filled.svg` - Filled rating star
+   - `half-star.svg` - Half rating star
+
+3. **Social Media Icons**:
+   - `facebook.svg`
+   - `twitter.svg`
+   - `instagram.svg`
+   - `linkedin.svg`
+
+4. **Feature Icons**:
+   - `verified.svg` - Verified professionals
+   - `shield.svg` - Safety/security
+   - `wallet.svg` - Payments/pricing
+   - `chat.svg` - Messaging
+   - `review.svg` - Review system
+
+5. **Action Icons**:
+   - `edit.svg` - Edit profile
+   - `delete.svg` - Delete item
+   - `save.svg` - Save/bookmark
+   - `share.svg` - Share listing
+   - `phone.svg` - Contact number
+   - `email.svg` - Email contact
+
+6. **Status Icons**:
+   - `check-circle.svg` - Completed jobs
+   - `clock.svg` - Pending jobs
+   - `alert.svg` - Important notices
+   - `info.svg` - Information
+
+## 3. Additional Recommendations:
+
+### For Property Listings:
+- Sample property images (`property-1.jpg`, `property-2.jpg`, etc.)
+- Before/after images for work examples
+
+### For Worker Profiles:
+- Badges for certifications (`badge-certified.png`, `badge-premium.png`)
+- Tool icons representing skills (`tool-hammer.png`, `tool-wrench.png`)
+
+### For Notifications:
+- Different notification icons (`notification-job.png`, `notification-message.png`, `notification-alert.png`)
+
+## Implementation Notes:
+
+1. **Format Recommendations**:
+   - Use SVG for icons where possible (scalable, small file size)
+   - Use WebP format for photos (better compression than JPG/PNG)
+   - Optimize all images (recommended tools: TinyPNG, Squoosh)
+
+2. **Fallbacks**:
+   - Include alt text for all images
+   - Consider using CSS-based icons for simple shapes
+   - Have fallback PNG versions for SVG icons if supporting ancient browsers
+
+3. **Accessibility**:
+   - Use descriptive file names (not just `image1.png`)
+   - Add `aria-hidden="true"` to decorative icons
+   - Provide text alternatives for meaningful icons
+
+
 ---
 
 
-Key Features of This Structure:
-Modular Organization: Each major section has its own folder with dedicated HTML, CSS, and JS files.
+#### Key Features of This Structure:
+**Modular Organization**: Each major section has its own folder with dedicated HTML, CSS, and JS files.
 
-Separation of Concerns:
+**Separation of Concerns**:
 
-Global styles and scripts in the assets folder
+- Global styles and scripts in the assets folder
 
-Page-specific styles and scripts with their respective pages
+- Page-specific styles and scripts with their respective pages
 
-Scalability: Easy to add new pages or sections without cluttering.
+**Scalability**: Easy to add new pages or sections without cluttering.
 
-Reusability:
+#### Reusability:
 
-components.css for reusable UI components
+- components.css for reusable UI components
 
-utilities.css for utility classes
+- utilities.css for utility classes
 
-helpers.js for shared functions
+- helpers.js for shared functions
 
-No Dependencies: Pure HTML, CSS, and JavaScript as requested.
+- No Dependencies: Pure HTML, CSS, and JavaScript as requested.
 
-Implementation Notes:
-For dark mode, you'd use the theme.js to handle the toggle and apply classes to the root element.
+#### Implementation Notes:
+- For dark mode, you'd use the theme.js to handle the toggle and apply classes to the root element.
 
-All mock data can be stored in the respective JavaScript files (or in a separate mockData.js if you prefer).
+- All mock data can be stored in the respective JavaScript files (or in a separate mockData.js if you prefer).
 
-Navigation between pages would be handled with standard anchor tags since we're not using a SPA framework.
+- Navigation between pages would be handled with standard anchor tags since we're not using a SPA framework.
 
-For responsive design, use media queries in each CSS file or in the global styles.css.
+- For responsive design, use media queries in each CSS file or in the global styles.css.
 
 
 ---
@@ -167,7 +282,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -175,7 +290,7 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launch the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
@@ -183,7 +298,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified, and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 - See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
@@ -194,9 +309,16 @@ Your app is ready to be deployed!
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instead,
+it will copy all the configuration files and the transitive dependencies
+(webpack, Babel, ESLint, etc.) right into your project so you have full control over them.
+All the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them.
+At this point, you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You don't have to ever use `eject`.
+The curated feature set is suitable for small and middle deployments,
+and you shouldn't feel obligated to use this feature.
+However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
