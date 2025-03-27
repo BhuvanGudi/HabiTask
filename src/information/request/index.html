@@ -55,18 +55,20 @@
     <main class="main-content">
         <header class="top-nav">
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <label>
+                    <input type="text" placeholder="Search...">
+                </label>
                 <button class="search-btn">🔍</button>
             </div>
             <div class="user-menu">
                 <div class="notifications">
                     <button class="notification-btn">
-                        ⭐
+                        🔔
                     </button>
                 </div>
                 <div class="user-profile">
-                    <img src="../../assets/images/users/user-owner.png" alt="User Avatar">
-                    <span>Property Owner</span>
+                    <img src="../../assets/images/users/home-owner.jpeg" alt="User Avatar">
+                    <span>Cassy Mills</span>
                 </div>
             </div>
         </header>
@@ -179,7 +181,7 @@
                             <label for="timeline">Estimated Timeline</label>
                             <select id="timeline">
                                 <option value="1day">1 day</option>
-                                <option value="fewdays">Few days</option>
+                                <option value="few-days">Few days</option>
                                 <option value="1week">1 week</option>
                                 <option value="2weeks">2 weeks</option>
                                 <option value="month+">1 month+</option>
@@ -192,7 +194,7 @@
                 <div class="form-section">
                     <h3>4. Photos & Documents</h3>
                     <div class="upload-area" id="uploadArea">
-                        <img src="../../assets/icons/ui/upload.svg" alt="Upload" class="upload-icon">
+                        <p class="upload-icon">📤</p>
                         <p>Drag & drop photos or documents here</p>
                         <p class="small">or</p>
                         <button type="button" class="btn btn-outline" id="browseFiles">Browse Files</button>

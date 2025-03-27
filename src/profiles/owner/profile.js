@@ -1,10 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Tab functionality
+    // Tab functionality - working version
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    // Check if elements exist
+    if (tabButtons.length === 0 || tabContents.length === 0) {
+        console.error('Tab elements not found!');
+    } else {
+        console.log('Found tabs:', tabButtons.length, 'buttons and', tabContents.length, 'contents');
+    }
+
+    // Tab click handler
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Get which tab to show
+            const tabId = this.getAttribute('data-tab');
+            console.log('Switching to tab:', tabId);
+
             // Remove active class from all buttons and contents
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
@@ -13,8 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             // Show corresponding content
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(`${tabId}-tab`).classList.add('active');
+            const targetTab = document.getElementById(`${tabId}-tab`);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            } else {
+                console.error('Tab content not found for:', tabId);
+            }
         });
     });
 
@@ -23,51 +39,47 @@ document.addEventListener('DOMContentLoaded', function() {
     if (changeAvatarBtn) {
         changeAvatarBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // In a real app, this would open a file upload dialog
             alert('In a real app, this would open a file upload dialog to change your profile picture');
         });
     }
 
-    // Edit profile button
+    // Edit profile button - FIXED VERSION
     const editProfileBtn = document.querySelector('.profile-actions .btn-outline');
     if (editProfileBtn) {
         editProfileBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // Switch to settings tab
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-
-            document.querySelector('.tab-btn[data-tab="settings"]').classList.add('active');
-            document.getElementById('settings-tab').classList.add('active');
+            // Switch to settings tab using the tab buttons we already have
+            tabButtons.forEach(btn => {
+                if (btn.getAttribute('data-tab') === 'settings') {
+                    btn.click(); // This will trigger our tab switching logic
+                }
+            });
         });
-    });
+    }
 
     // Change password button
     const changePasswordBtn = document.querySelector('.security-item .btn-outline');
     if (changePasswordBtn) {
         changePasswordBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // In a real app, this would open a password change modal
             alert('In a real app, this would open a password change modal');
         });
-    });
+    }
 
     // Enable 2FA button
     const enable2FABtn = document.querySelectorAll('.security-item .btn-outline')[1];
     if (enable2FABtn) {
         enable2FABtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // In a real app, this would open a 2FA setup flow
             alert('In a real app, this would open a two-factor authentication setup flow');
         });
-    });
+    }
 
     // Form submission
     const profileForm = document.querySelector('.settings-form form');
     if (profileForm) {
         profileForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // In a real app, this would save the profile changes
             alert('Profile changes saved successfully!');
         });
     }
@@ -84,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile sidebar toggle (reuse from dashboard.js if needed)
+    // Mobile sidebar toggle
     const sidebarToggle = document.createElement('button');
     sidebarToggle.className = 'sidebar-toggle';
     sidebarToggle.innerHTML = '☰';
@@ -104,27 +116,28 @@ document.addEventListener('DOMContentLoaded', function() {
     sidebarToggle.style.display = 'none';
 
     const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('mobile-open');
+        });
 
-    sidebarToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('mobile-open');
-    });
+        document.body.appendChild(sidebarToggle);
 
-    document.body.appendChild(sidebarToggle);
-
-    function checkSidebarVisibility() {
-        if (window.innerWidth <= 768) {
-            sidebarToggle.style.display = 'flex';
-            sidebar.classList.remove('mobile-open');
-        } else {
-            sidebarToggle.style.display = 'none';
-            sidebar.classList.add('mobile-open');
+        function checkSidebarVisibility() {
+            if (window.innerWidth <= 768) {
+                sidebarToggle.style.display = 'flex';
+                sidebar.classList.remove('mobile-open');
+            } else {
+                sidebarToggle.style.display = 'none';
+                sidebar.classList.add('mobile-open');
+            }
         }
+
+        window.addEventListener('resize', checkSidebarVisibility);
+        checkSidebarVisibility();
     }
 
-    window.addEventListener('resize', checkSidebarVisibility);
-    checkSidebarVisibility();
-
-    // Theme toggle (reuse from dashboard.js if needed)
+    // Theme toggle
     const themeToggle = document.createElement('button');
     themeToggle.className = 'theme-toggle';
     themeToggle.innerHTML = '🌙';

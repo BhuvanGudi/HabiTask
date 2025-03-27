@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | PropertyPro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard/owner/index.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../../information/properties/index.html" class="nav-item">
+                <span class="nav-icon">🏘️</span>
+                <span class="nav-text">My Properties</span>
+            </a>
+            <a href="../../information/request/index.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Job Requests</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">5</span>
+            </a>
+            <a href="../../profiles/owner/index.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <label>
+                    <input type="text" placeholder="Search notifications...">
+                </label>
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">
+                        🔔
+                        <span class="notification-counter">5</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/home-owner.jpeg" alt="User Avatar">
+                    <span>Cassy Mills</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="notifications-content">
+            <div class="notifications-header">
+                <h1>Notifications</h1>
+                <div class="notifications-actions">
+                    <button class="btn btn-outline mark-all-read">Mark All as Read</button>
+                    <div class="filter-dropdown">
+                        <button class="btn btn-outline filter-btn">
+                            <span>All Notifications</span>
+                            <img src="../../assets/icons/ui/filter.svg" alt="Filter">
+                        </button>
+                        <div class="filter-options">
+                            <a href="#" class="filter-option active">All Notifications</a>
+                            <a href="#" class="filter-option">Job Applications</a>
+                            <a href="#" class="filter-option">Messages</a>
+                            <a href="#" class="filter-option">System Alerts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notifications-list">
+                <!-- Today's Notifications -->
+                <div class="notification-group">
+                    <h3 class="group-title">Today</h3>
+
+                    <!-- Notification 1 -->
+                    <div class="notification-card unread application">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/verified.svg" alt="Application">
+                        </div>
+                        <div class="notification-content">
+                            <h4>New Application Received</h4>
+                            <p>Mike Plumber applied for your "Bathroom Remodel" job at 123 Main St</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">2 hours ago</span>
+                                <span class="notification-status">Pending Review</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">View</button>
+                            <button class="btn btn-sm btn-primary">Respond</button>
+                        </div>
+                    </div>
+
+                    <!-- Notification 2 -->
+                    <div class="notification-card unread message">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/chat.svg" alt="Message">
+                        </div>
+                        <div class="notification-content">
+                            <h4>New Message</h4>
+                            <p>Sarah Electrician sent you a message about your wiring job</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">1 hour ago</span>
+                                <span class="notification-status">Unread</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">View</button>
+                            <button class="btn btn-sm btn-primary">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yesterday's Notifications -->
+                <div class="notification-group">
+                    <h3 class="group-title">Yesterday</h3>
+
+                    <!-- Notification 3 -->
+                    <div class="notification-card completed">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/review.svg" alt="Review">
+                        </div>
+                        <div class="notification-content">
+                            <h4>Job Completed</h4>
+                            <p>Your painting job at 456 Oak Ave has been marked as completed by Alex Painter</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">Yesterday, 4:30 PM</span>
+                                <span class="notification-status">Pending Payment</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">View Job</button>
+                            <button class="btn btn-sm btn-primary">Release Payment</button>
+                        </div>
+                    </div>
+
+                    <!-- Notification 4 -->
+                    <div class="notification-card review">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/review.svg" alt="Review">
+                        </div>
+                        <div class="notification-content">
+                            <h4>New Review Received</h4>
+                            <p>John Tenant left you a 5-star review for your quick response to maintenance requests</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">Yesterday, 11:15 AM</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">View Review</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This Week's Notifications -->
+                <div class="notification-group">
+                    <h3 class="group-title">This Week</h3>
+
+                    <!-- Notification 5 -->
+                    <div class="notification-card alert">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/shield.svg" alt="Alert">
+                        </div>
+                        <div class="notification-content">
+                            <h4>Payment Received</h4>
+                            <p>Your payment of $350 for the plumbing job has been processed</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">Monday, 2:45 PM</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Notification 6 -->
+                    <div class="notification-card system">
+                        <div class="notification-icon">
+                            <img src="../../assets/icons/feature/wallet.svg" alt="System">
+                        </div>
+                        <div class="notification-content">
+                            <h4>Platform Update</h4>
+                            <p>New feature: Now you can schedule recurring maintenance jobs</p>
+                            <div class="notification-meta">
+                                <span class="notification-time">Monday, 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="notification-actions">
+                            <button class="btn btn-sm btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="notifications.js"></script>
+<script src="../../assets/js/theme.js"></script>
+</body>
+</html>
