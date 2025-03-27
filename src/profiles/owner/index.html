@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | PropertyPro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard/owner/index.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../../listings/findJobs/index.html" class="nav-item">
+                <span class="nav-icon">🏘️</span>
+                <span class="nav-text">My Properties</span>
+            </a>
+            <a href="../../listings/findJobs/index.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Job Requests</span>
+            </a>
+            <a href="../../notifications/worker/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">2</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <label>
+                    <input type="text" placeholder="Search...">
+                </label>
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-counter">2</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/user-owner-1.png" alt="User Avatar">
+                    <span>John PropertyOwner</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../../assets/images/users/user-owner.png" alt="Profile Picture">
+                    <button class="btn btn-outline btn-sm change-avatar">Change Photo</button>
+                </div>
+                <div class="profile-info">
+                    <h1>John PropertyOwner</h1>
+                    <p class="profile-location">📍 New York, NY</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Properties</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">28</span>
+                            <span class="stat-label">Jobs Posted</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Avg Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-outline">Edit Profile</button>
+                    <button class="btn btn-primary">Post New Job</button>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="properties">My Properties</button>
+                <button class="tab-btn" data-tab="jobs">Job History</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="settings">Account Settings</button>
+            </div>
+
+            <div class="tab-content active" id="properties-tab">
+                <div class="properties-grid">
+                    <!-- Property 1 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="../../assets/images/properties/apartment.png" alt="Property Image">
+                            <span class="property-status rented">Rented</span>
+                        </div>
+                        <div class="property-details">
+                            <h3>123 Main St, Apartment 4B</h3>
+                            <p class="property-type">Apartment · 2 Bed · 1 Bath</p>
+                            <div class="property-meta">
+                                <span>📅 Listed: 2 years ago</span>
+                                <span>🔄 3 active jobs</span>
+                            </div>
+                            <div class="property-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <button class="btn btn-sm btn-primary">Post Job</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="../../assets/images/properties/house.png" alt="Property Image">
+                            <span class="property-status vacant">Vacant</span>
+                        </div>
+                        <div class="property-details">
+                            <h3>456 Oak Avenue</h3>
+                            <p class="property-type">House · 3 Bed · 2 Bath</p>
+                            <div class="property-meta">
+                                <span>📅 Listed: 6 months ago</span>
+                                <span>🔄 1 active job</span>
+                            </div>
+                            <div class="property-actions">
+                                <button class="btn btn-sm btn-outline">View Details</button>
+                                <button class="btn btn-sm btn-primary">Post Job</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Property -->
+                    <div class="property-card add-property">
+                        <div class="add-property-content">
+                            <span class="add-icon">+</span>
+                            <h3>Add New Property</h3>
+                            <p>List a new property to find workers</p>
+                            <button class="btn btn-primary">Add Property</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="jobs-tab">
+                <div class="jobs-list">
+                    <!-- Job 1 -->
+                    <div class="job-card completed">
+                        <div class="job-header">
+                            <h3>Plumbing Repair</h3>
+                            <span class="job-status">Completed</span>
+                        </div>
+                        <p class="job-property">123 Main St, Apartment 4B</p>
+                        <p class="job-description">Fixed kitchen sink leak and replaced pipes</p>
+                        <div class="job-footer">
+                            <div class="job-worker">
+                                <img src="../../assets/images/users/user-worker.png" alt="Worker">
+                                <span>Mike Plumber</span>
+                            </div>
+                            <div class="job-meta">
+                                <span>💰 $350</span>
+                                <span>📅 Jan 15, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="job-card in-progress">
+                        <div class="job-header">
+                            <h3>Painting Service</h3>
+                            <span class="job-status">In Progress</span>
+                        </div>
+                        <p class="job-property">456 Oak Avenue</p>
+                        <p class="job-description">Whole house repainting - exterior</p>
+                        <div class="job-footer">
+                            <div class="job-worker">
+                                <img src="../../assets/images/users/user-worker.png" alt="Worker">
+                                <span>Sarah Painter</span>
+                            </div>
+                            <div class="job-meta">
+                                <span>💰 $1,200</span>
+                                <span>📅 Started: Feb 1, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="reviews-tab">
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="average-rating">
+                            <span class="rating-number">4.9</span>
+                            <span class="rating-stars">★★★★★</span>
+                            <span class="rating-count">(28 reviews)</span>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 85%;"></div>
+                                </div>
+                                <span>24</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 10%;"></div>
+                                </div>
+                                <span>3</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 5%;"></div>
+                                </div>
+                                <span>1</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="../../assets/images/users/tenant1.jpg" alt="Reviewer">
+                                <div class="reviewer-info">
+                                    <h4>Michael Johnson</h4>
+                                    <span class="review-date">Jan 20, 2023</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Plumbing Repair at 123 Main St</h5>
+                            <p>John was very responsive and found a great plumber who fixed our issue the same day. The plumber was professional and reasonably priced. Highly recommended!</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="../../assets/images/users/tenant2.jpg" alt="Reviewer">
+                                <div class="reviewer-info">
+                                    <h4>Sarah Williams</h4>
+                                    <span class="review-date">Dec 15, 2022</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Electrical Work at 456 Oak Ave</h5>
+                            <p>Good experience overall. The electrician was knowledgeable but arrived 30 minutes late. The work itself was done well though.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="settings-tab">
+                <div class="settings-form">
+                    <h3>Account Settings</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" value="John PropertyOwner">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="john@propertyowner.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" value="New York, NY">
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio">Professional property owner with 10+ years experience managing residential properties in NYC.</textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+
+                    <div class="account-security">
+                        <h4>Security</h4>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h5>Password</h5>
+                                <p>Last changed 3 months ago</p>
+                            </div>
+                            <button class="btn btn-outline btn-sm">Change Password</button>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h5>Two-Factor Authentication</h5>
+                                <p>Disabled</p>
+                            </div>
+                            <button class="btn btn-outline btn-sm">Enable 2FA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="profile.js"></script>
+<script src="../../assets/js/theme.js"></script>
+</body>
+</html>

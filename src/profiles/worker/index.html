@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | PropertyPro</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard/worker/index.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../../listings/findJobs/index.html" class="nav-item">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-text">Find Jobs</span>
+            </a>
+            <a href="../../listings/findJobs/index.html" class="nav-item">
+                <span class="nav-icon">💼</span>
+                <span class="nav-text">My Jobs</span>
+            </a>
+            <a href="../../notifications/worker/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <input type="text" placeholder="Search jobs...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">🔔
+                        <span class="notification-counter">3</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/worker-avatar.jpg" alt="User Avatar">
+                    <span>Alex Handyman</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="../../assets/images/users/worker-avatar.jpg" alt="Profile Picture">
+                    <button class="btn btn-outline btn-sm change-avatar">Change Photo</button>
+                </div>
+                <div class="profile-info">
+                    <h1>Alex Handyman</h1>
+                    <p class="profile-title">Licensed Handyman · 5-year experience</p>
+                    <p class="profile-location">📍 Brooklyn, NY</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">42</span>
+                            <span class="stat-label">Jobs Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">Avg Rating</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Response Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-outline">Edit Profile</button>
+                    <button class="btn btn-primary">Browse Jobs</button>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+
+            <div class="tab-content active" id="about-tab">
+                <div class="about-section">
+                    <h3>About Me</h3>
+                    <p>Licensed handyman with 5+ years of experience in residential property maintenance. Specializing in plumbing, electrical work, and general home repairs. Committed to providing high-quality work with excellent customer service.</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">5 years</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Hourly Rate</span>
+                            <span class="detail-value">$65 - $85/hr</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Response Time</span>
+                            <span class="detail-value">Within 2 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Languages</span>
+                            <span class="detail-value">English, Spanish</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verification-section">
+                    <h3>Verifications</h3>
+                    <div class="verification-badges">
+                        <div class="badge-item verified">
+                            <span class="badge-icon">✅</span>
+                            <span class="badge-text">Identity Verified</span>
+                        </div>
+                        <div class="badge-item verified">
+                            <span class="badge-icon">✅</span>
+                            <span class="badge-text">License Verified</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon">❌</span>
+                            <span class="badge-text">Background Check</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="skills-tab">
+                <div class="skills-section">
+                    <h3>My Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card primary">
+                            <h4>Plumbing</h4>
+                            <p>Pipe repair, fixture installation, drain cleaning, water heater service</p>
+                            <div class="skill-rating">★★★★★ (24 jobs)</div>
+                        </div>
+                        <div class="skill-card primary">
+                            <h4>Electrical</h4>
+                            <p>Wiring, outlet installation, lighting, circuit breaker repair</p>
+                            <div class="skill-rating">★★★★☆ (18 jobs)</div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Carpentry</h4>
+                            <p>Furniture assembly, shelving, door/window repair</p>
+                            <div class="skill-rating">★★★★★ (12 jobs)</div>
+                        </div>
+                        <div class="skill-card">
+                            <h4>Painting</h4>
+                            <p>Interior/exterior painting, surface prep, wallpaper removal</p>
+                            <div class="skill-rating">★★★★☆ (8 jobs)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications-section">
+                    <h3>Certifications</h3>
+                    <div class="certification-card">
+                        <div class="certification-header">
+                            <h4>NY Licensed Plumber</h4>
+                            <span class="certification-date">Issued: 2019 · Expires: 2025</span>
+                        </div>
+                        <p>New York State Department of Buildings - License #P123456</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-header">
+                            <h4>Electrical Safety Certification</h4>
+                            <span class="certification-date">Issued: 2020 · Expires: 2024</span>
+                        </div>
+                        <p>National Electrical Contractors Association</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="portfolio-tab">
+                <div class="portfolio-section">
+                    <h3>My Work</h3>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="../../assets/images/portfolio/plumbing1.jpg" alt="Plumbing Work">
+                            <div class="portfolio-overlay">
+                                <h5>Bathroom Remodel</h5>
+                                <p>Full plumbing replacement</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="../../assets/images/portfolio/electrical1.jpg" alt="Electrical Work">
+                            <div class="portfolio-overlay">
+                                <h5>Kitchen Rewiring</h5>
+                                <p>New circuits and outlets</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="../../assets/images/portfolio/carpentry1.jpg" alt="Carpentry Work">
+                            <div class="portfolio-overlay">
+                                <h5>Custom Shelving</h5>
+                                <p>Built-in living room shelves</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="../../assets/images/portfolio/painting1.jpg" alt="Painting Work">
+                            <div class="portfolio-overlay">
+                                <h5>Exterior Painting</h5>
+                                <p>Complete house repaint</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="reviews-tab">
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="average-rating">
+                            <span class="rating-number">4.8</span>
+                            <span class="rating-stars">★★★★★</span>
+                            <span class="rating-count">(42 reviews)</span>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 80%;"></div>
+                                </div>
+                                <span>34</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 15%;"></div>
+                                </div>
+                                <span>6</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 5%;"></div>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 ★</span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="../../assets/images/users/owner1.jpg" alt="Reviewer">
+                                <div class="reviewer-info">
+                                    <h4>John PropertyOwner</h4>
+                                    <span class="review-date">Jan 15, 2023</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Plumbing Repair at 123 Main St</h5>
+                            <p>Alex fixed our kitchen sink leak quickly and professionally. He explained the issue clearly and offered a fair price. Will definitely hire again for future plumbing needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="../../assets/images/users/owner2.jpg" alt="Reviewer">
+                                <div class="reviewer-info">
+                                    <h4>Sarah Landlord</h4>
+                                    <span class="review-date">Dec 10, 2022</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Electrical Work at 456 Oak Ave</h5>
+                            <p>Good work overall. Alex was knowledgeable and fixed our wiring issue. Only reason not 5 stars was because he arrived 30 minutes later than scheduled.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="settings-tab">
+                <div class="settings-form">
+                    <h3>Account Settings</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" value="Alex Handyman">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="alex@handyman.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="(555) 987-6543">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" value="Brooklyn, NY">
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Professional Bio</label>
+                            <textarea id="bio">Licensed handyman with 5+ years of experience in residential property maintenance. Specializing in plumbing, electrical work, and general home repairs.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rate">Hourly Rate ($)</label>
+                            <input type="number" id="rate" value="65" min="0">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+
+                    <div class="account-security">
+                        <h4>Security</h4>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h5>Password</h5>
+                                <p>Last changed 2 months ago</p>
+                            </div>
+                            <button class="btn btn-outline btn-sm">Change Password</button>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h5>Two-Factor Authentication</h5>
+                                <p>Disabled</p>
+                            </div>
+                            <button class="btn btn-outline btn-sm">Enable 2FA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="profile.js"></script>
+<script src="../../assets/js/theme.js"></script>
+</body>
+</html>

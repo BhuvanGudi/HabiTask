@@ -1,0 +1,742 @@
+/* Reuse dashboard styles */
+@import url('../../dashboard/worker/dashboard.css');
+
+.profile-content {
+    padding: 2rem;
+}
+
+.profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.profile-avatar {
+    position: relative;
+    text-align: center;
+}
+
+.profile-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: var(--shadow);
+}
+
+.change-avatar {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-title {
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+.profile-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+    align-self: flex-end;
+}
+
+.profile-tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--gray-color);
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Properties Tab */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.property-card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.property-image {
+    position: relative;
+    height: 200px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.property-status.rented {
+    background-color: var(--success-color);
+}
+
+.property-status.vacant {
+    background-color: var(--warning-color);
+}
+
+.property-details {
+    padding: 1.5rem;
+}
+
+.property-type {
+    color: var(--dark-gray);
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.property-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+.property-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add-property {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--gray-color);
+    background-color: rgba(74, 107, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-property:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 107, 255, 0.1);
+}
+
+.add-property-content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.add-icon {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.add-property h3 {
+    margin-bottom: 0.5rem;
+}
+
+.add-property p {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Jobs Tab */
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.job-card.completed {
+    border-left: 3px solid var(--success-color);
+}
+
+.job-card.in-progress {
+    border-left: 3px solid var(--primary-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.job-status {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.job-property {
+    color: var(--dark-gray);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-description {
+    margin-bottom: 1rem;
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-worker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.job-worker img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.job-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+/* Reviews Tab */
+.reviews-summary {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.rating-overview {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.average-rating {
+    text-align: center;
+    min-width: 150px;
+}
+
+.rating-number {
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.rating-stars {
+    font-size: 1.25rem;
+    color: #F59E0B;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.rating-count {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.rating-bars {
+    flex: 1;
+    min-width: 250px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating-bar span {
+    min-width: 40px;
+    font-size: 0.875rem;
+}
+
+.bar-container {
+    flex: 1;
+    height: 8px;
+    background-color: var(--gray-color);
+    border-radius: var(--radius-full);
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #F59E0B;
+    border-radius: var(--radius-full);
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review-card {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info h4 {
+    margin-bottom: 0.25rem;
+}
+
+.review-date {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.review-rating {
+    color: #F59E0B;
+    font-size: 1rem;
+}
+
+.review-content h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Settings Tab */
+.settings-form {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+}
+
+.settings-form h3 {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-color);
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.account-security {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.account-security h4 {
+    margin-bottom: 1.5rem;
+}
+
+.security-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.security-item:last-child {
+    border-bottom: none;
+}
+
+.security-info h5 {
+    margin-bottom: 0.25rem;
+}
+
+.security-info p {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+/* Worker Profile Specific Styles */
+.about-section {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.detail-item {
+    background-color: var(--gray-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.detail-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+}
+
+.detail-value {
+    font-weight: 600;
+}
+
+.verification-section {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.verification-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    background-color: var(--gray-color);
+}
+
+.badge-item.verified {
+    background-color: #D1FAE5;
+}
+
+.badge-icon {
+    font-size: 1.25rem;
+}
+
+.skills-section {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--gray-color);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.skill-card.primary {
+    background-color: rgba(74, 107, 255, 0.1);
+    border: 1px solid rgba(74, 107, 255, 0.2);
+}
+
+.skill-rating {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.certifications-section {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.certification-card {
+    background-color: var(--gray-color);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-top: 1rem;
+}
+
+.certification-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.certification-date {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.portfolio-section {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 200px;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-overlay h5 {
+    margin-bottom: 0.25rem;
+}
+
+.portfolio-overlay p {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+
+    .profile-actions {
+        align-self: center;
+        margin-top: 1rem;
+    }
+
+    .rating-overview {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rating-bars {
+        width: 100%;
+    }
+
+    .property-actions, .job-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .job-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}
