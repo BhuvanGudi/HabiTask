@@ -1,0 +1,353 @@
+/* Reuse dashboard styles */
+@import url('../../dashboard/worker/dashboard.css');
+
+.myjobs-content {
+    padding: 2rem;
+}
+
+.myjobs-header {
+    margin-bottom: 2rem;
+}
+
+.job-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--gray-color);
+    padding: 0.25rem;
+    border-radius: var(--radius);
+}
+
+.filter-tab {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+}
+
+.filter-tab:hover {
+    color: var(--primary-color);
+}
+
+.filter-tab.active {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.sort-dropdown {
+    position: relative;
+}
+
+.sort-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.sort-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.sort-options {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 100;
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.sort-dropdown:hover .sort-options {
+    display: block;
+}
+
+.sort-option {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: var(--dark-color);
+    transition: all 0.2s ease;
+}
+
+.sort-option:hover {
+    background-color: var(--gray-color);
+}
+
+.sort-option.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.job-status-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.job-card.active .job-status-badge {
+    background-color: var(--primary-color);
+}
+
+.job-card.pending .job-status-badge {
+    background-color: var(--warning-color);
+}
+
+.job-card.completed .job-status-badge {
+    background-color: var(--success-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.job-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.job-price {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.job-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.job-date {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.job-location {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.job-location img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+}
+
+.job-details {
+    margin-bottom: 1.5rem;
+}
+
+.job-description {
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+}
+
+.job-property {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--gray-color);
+    border-radius: var(--radius);
+}
+
+.job-property img {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
+
+.job-property h4 {
+    margin-bottom: 0.25rem;
+}
+
+.job-property p {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-color);
+}
+
+.job-owner img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.job-owner h5 {
+    margin-bottom: 0.25rem;
+}
+
+.rating {
+    font-size: 0.875rem;
+    color: #F59E0B;
+}
+
+.job-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Job Status Specific Styles */
+.job-card.active {
+    border-left: 3px solid var(--primary-color);
+}
+
+.job-card.pending {
+    border-left: 3px solid var(--warning-color);
+}
+
+.job-card.completed {
+    border-left: 3px solid var(--success-color);
+}
+
+/* Filtering Styles */
+.job-card {
+    display: block;
+}
+
+.job-card.hidden {
+    display: none;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.empty-state img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .myjobs-content {
+        padding: 1rem;
+    }
+
+    .job-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-meta {
+        text-align: left;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .job-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .job-property {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-actions {
+        flex-direction: column;
+    }
+
+    .job-actions .btn {
+        width: 100%;
+    }
+}

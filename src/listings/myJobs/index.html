@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Worker Dashboard | PropertyPro</title>
+    <title>My Jobs | PropertyPro</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/utilities.css">
     <link rel="stylesheet" href="myJobs.css">
 </head>
 <body>
+<div class="dashboard-container">
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-header">
@@ -16,7 +17,7 @@
         </div>
 
         <nav class="sidebar-nav">
-            <a href="../../dashboard/worker/index.html" class="nav-item active">
+            <a href="../../dashboard/worker/index.html" class="nav-item">
                 <span class="nav-icon">📊</span>
                 <span class="nav-text">Dashboard</span>
             </a>
@@ -24,14 +25,13 @@
                 <span class="nav-icon">🔍</span>
                 <span class="nav-text">Find Jobs</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="#" class="nav-item active">
                 <span class="nav-icon">💼</span>
                 <span class="nav-text">My Jobs</span>
             </a>
             <a href="../../notifications/worker/index.html" class="nav-item">
                 <span class="nav-icon">🔔</span>
                 <span class="nav-text">Notifications</span>
-                <span class="notification-badge">5</span>
             </a>
             <a href="../../profiles/worker/index.html" class="nav-item">
                 <span class="nav-icon">👤</span>
@@ -50,4 +50,183 @@
             </a>
         </div>
     </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <label>
+                    <input type="text" placeholder="Search my jobs...">
+                </label>
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">
+                        ⭐
+                        <span class="notification-counter">3</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/user-worker.png" alt="User Avatar">
+                    <span>Skilled Worker</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="myjobs-content">
+            <div class="myjobs-header">
+                <h1>My Jobs</h1>
+                <div class="job-filters">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All Jobs</button>
+                        <button class="filter-tab" data-filter="active">Active</button>
+                        <button class="filter-tab" data-filter="pending">Pending</button>
+                        <button class="filter-tab" data-filter="completed">Completed</button>
+                    </div>
+                    <div class="sort-dropdown">
+                        <button class="btn btn-outline sort-btn">
+                            <span>Sort By: Newest</span>
+                            <img src="../../assets/icons/ui/filter.svg" alt="Sort">
+                        </button>
+                        <div class="sort-options">
+                            <a href="#" class="sort-option active">Newest First</a>
+                            <a href="#" class="sort-option">Highest Paying</a>
+                            <a href="#" class="sort-option">Nearest Deadline</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jobs-list">
+                <!-- Active Job -->
+                <div class="job-card active">
+                    <div class="job-status-badge">Active</div>
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Bathroom Remodel</h3>
+                            <p class="job-price">$1,200 - $1,500</p>
+                        </div>
+                        <div class="job-meta">
+                            <span class="job-date">Due: Jan 30, 2023</span>
+                            <span class="job-location">
+                                    <img src="../../assets/icons/ui/location.svg" alt="Location">
+                                    3.2 miles away
+                                </span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <p class="job-description">Full bathroom remodel including tiling, plumbing fixtures replacement, and painting.</p>
+                        <div class="job-property">
+                            <img src="../../assets/images/properties/house.png" alt="Property">
+                            <div>
+                                <h4>123 Main St</h4>
+                                <p>House · 3 Bed · 2 Bath</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-owner">
+                            <img src="../../assets/images/users/user-owner1.png" alt="Owner">
+                            <div>
+                                <h5>John PropertyOwner</h5>
+                                <p class="rating">★★★★★ (24 reviews)</p>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-primary btn-sm">Update Status</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Job -->
+                <div class="job-card pending">
+                    <div class="job-status-badge">Pending Approval</div>
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Electrical Wiring</h3>
+                            <p class="job-price">$850 fixed</p>
+                        </div>
+                        <div class="job-meta">
+                            <span class="job-date">Applied: Jan 15, 2023</span>
+                            <span class="job-location">
+                                    <img src="../../assets/icons/ui/location.svg" alt="Location">
+                                    1.5 miles away
+                                </span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <p class="job-description">Rewiring kitchen outlets and installing new light fixtures.</p>
+                        <div class="job-property">
+                            <img src="../../assets/images/properties/apartment.png" alt="Property">
+                            <div>
+                                <h4>456 Oak Ave</h4>
+                                <p>Apartment · 2 Bed · 1 Bath</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-owner">
+                            <img src="../../assets/images/users/user-owner2.png" alt="Owner">
+                            <div>
+                                <h5>Sarah Landlord</h5>
+                                <p class="rating">★★★★☆ (18 reviews)</p>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-outline btn-sm">Cancel Application</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Job -->
+                <div class="job-card completed">
+                    <div class="job-status-badge">Completed</div>
+                    <div class="job-header">
+                        <div class="job-info">
+                            <h3>Kitchen Cabinet Installation</h3>
+                            <p class="job-price">$65/hour · $520 total</p>
+                        </div>
+                        <div class="job-meta">
+                            <span class="job-date">Completed: Dec 20, 2022</span>
+                            <span class="job-location">
+                                    <img src="../../assets/icons/ui/location.svg" alt="Location">
+                                    5.7 miles away
+                                </span>
+                        </div>
+                    </div>
+                    <div class="job-details">
+                        <p class="job-description">Install pre-assembled kitchen cabinets. Tools provided. 2-day project estimated.</p>
+                        <div class="job-property">
+                            <img src="../../assets/images/properties/commercial.png" alt="Property">
+                            <div>
+                                <h4>789 Pine Rd</h4>
+                                <p>Commercial · Office Space</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-owner">
+                            <img src="../../assets/images/users/user-owner3.png" alt="Owner">
+                            <div>
+                                <h5>Mike BusinessOwner</h5>
+                                <p class="rating">★★★★★ (12 reviews)</p>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-sm">View Details</button>
+                            <button class="btn btn-outline btn-sm">Request Review</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="myJobs.js"></script>
+<script src="../../assets/js/theme.js"></script>
 </body>
+</html>
