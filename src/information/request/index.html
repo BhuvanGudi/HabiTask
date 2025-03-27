@@ -3,52 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owner Dashboard | PropertyPro</title>
+    <title>Create Job Request | PropertyPro</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/utilities.css">
     <link rel="stylesheet" href="request.css">
 </head>
 <body>
-<!-- Sidebar -->
-<aside class="sidebar">
-    <div class="sidebar-header">
-        <a href="../../index.html" class="logo">Property<span>Pro</span></a>
-    </div>
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../../index.html" class="logo">Property<span>Pro</span></a>
+        </div>
 
-    <nav class="sidebar-nav">
-        <a href="#" class="nav-item active">
-            <span class="nav-icon">📊</span>
-            <span class="nav-text">Dashboard</span>
-        </a>
-        <a href="../../information/properties/index.html" class="nav-item">
-            <span class="nav-icon">🏘️</span>
-            <span class="nav-text">My Properties</span>
-        </a>
-        <a href="../../information/request/index.html" class="nav-item">
-            <span class="nav-icon">📋</span>
-            <span class="nav-text">Job Requests</span>
-        </a>
-        <a href="../../notifications/owner/index.html" class="nav-item">
-            <span class="nav-icon">🔔</span>
-            <span class="nav-text">Notifications</span>
-            <span class="notification-badge">3</span>
-        </a>
-        <a href="../../profiles/owner/index.html" class="nav-item">
-            <span class="nav-icon">👤</span>
-            <span class="nav-text">Profile</span>
-        </a>
-    </nav>
+        <nav class="sidebar-nav">
+            <a href="../../dashboard/owner/index.html" class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="../../information/properties/index.html" class="nav-item">
+                <span class="nav-icon">🏘️</span>
+                <span class="nav-text">My Properties</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Job Requests</span>
+            </a>
+            <a href="../../notifications/owner/index.html" class="nav-item">
+                <span class="nav-icon">🔔</span>
+                <span class="nav-text">Notifications</span>
+            </a>
+            <a href="../../profiles/owner/index.html" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+            </a>
+        </nav>
 
-    <div class="sidebar-footer">
-        <a href="#" class="nav-item">
-            <span class="nav-icon">⚙️</span>
-            <span class="nav-text">Settings</span>
-        </a>
-        <a href="../../auth/login.html" class="nav-item">
-            <span class="nav-icon">🚪</span>
-            <span class="nav-text">Logout</span>
-        </a>
-    </div>
-</aside>
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+            <a href="../../auth/login.html" class="nav-item">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-nav">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="user-menu">
+                <div class="notifications">
+                    <button class="notification-btn">
+                        ⭐
+                        <span class="notification-counter">2</span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="../../assets/images/users/user-owner.png" alt="User Avatar">
+                    <span>Property Owner</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="request-content">
+            <div class="request-header">
+                <h1>Create New Job Request</h1>
+                <p>Fill out the form below to post a new job request for your property</p>
+            </div>
+
+            <form id="jobRequestForm" class="request-form">
+                <!-- Property Selection -->
+                <div class="form-section">
+                    <h3>1. Select Property</h3>
+                    <div class="property-selection">
+                        <div class="property-option">
+                            <input type="radio" name="property" id="property1" checked>
+                            <label for="property1">
+                                <div class="property-image">
+                                    <img src="../../assets/images/properties/house.png" alt="Property">
+                                </div>
+                                <div class="property-info">
+                                    <h4>123 Main St</h4>
+                                    <p>House · 3 Bed · 2 Bath</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="property-option">
+                            <input type="radio" name="property" id="property2">
+                            <label for="property2">
+                                <div class="property-image">
+                                    <img src="../../assets/images/properties/apartment.png" alt="Property">
+                                </div>
+                                <div class="property-info">
+                                    <h4>456 Oak Ave</h4>
+                                    <p>Apartment · 2 Bed · 1 Bath</p>
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-outline add-property">
+                            <span>+</span> Add New Property
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job Details -->
+                <div class="form-section">
+                    <h3>2. Job Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title*</label>
+                            <input type="text" id="jobTitle" placeholder="e.g., Plumbing Repair" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobType">Job Type*</label>
+                            <select id="jobType" required>
+                                <option value="">Select job type</option>
+                                <option value="plumbing">Plumbing</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="carpentry">Carpentry</option>
+                                <option value="painting">Painting</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="landscaping">Landscaping</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobDescription">Job Description*</label>
+                            <textarea id="jobDescription" rows="4" required placeholder="Describe the work needed in detail"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobUrgency">Urgency*</label>
+                            <select id="jobUrgency" required>
+                                <option value="routine">Routine (Within 2 weeks)</option>
+                                <option value="soon">Soon (Within 1 week)</option>
+                                <option value="urgent">Urgent (Within 48 hours)</option>
+                                <option value="emergency">Emergency (Immediately)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget & Timeline -->
+                <div class="form-section">
+                    <h3>3. Budget & Timeline</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="budgetType">Budget Type*</label>
+                            <select id="budgetType" required>
+                                <option value="fixed">Fixed Price</option>
+                                <option value="hourly">Hourly Rate</option>
+                                <option value="negotiable">Negotiable</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budgetAmount">Amount*</label>
+                            <div class="input-group">
+                                <span>$</span>
+                                <input type="number" id="budgetAmount" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Preferred Start Date*</label>
+                            <div class="input-group">
+                                <input type="date" id="startDate" required>
+                                <img src="../../assets/icons/ui/calender.svg" alt="Calendar" class="input-icon">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Estimated Timeline</label>
+                            <select id="timeline">
+                                <option value="1day">1 day</option>
+                                <option value="fewdays">Few days</option>
+                                <option value="1week">1 week</option>
+                                <option value="2weeks">2 weeks</option>
+                                <option value="month+">1 month+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos & Documents -->
+                <div class="form-section">
+                    <h3>4. Photos & Documents</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <img src="../../assets/icons/ui/upload.svg" alt="Upload" class="upload-icon">
+                        <p>Drag & drop photos or documents here</p>
+                        <p class="small">or</p>
+                        <button type="button" class="btn btn-outline" id="browseFiles">Browse Files</button>
+                        <input type="file" id="fileInput" multiple style="display: none;">
+                    </div>
+                    <div class="upload-preview" id="uploadPreview"></div>
+                </div>
+
+                <!-- Additional Details -->
+                <div class="form-section">
+                    <h3>5. Additional Details</h3>
+                    <div class="form-group">
+                        <label for="specialInstructions">Special Instructions</label>
+                        <textarea id="specialInstructions" rows="3" placeholder="Any special requirements or instructions for the worker"></textarea>
+                    </div>
+                    <div class="form-group">
+<!--                        <label for="workerRequirements">Worker Requirements</label>-->
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="licenseRequired">
+                                <span class="checkmark"></span>
+                                Licensed professional required
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="insuranceRequired">
+                                <span class="checkmark"></span>
+                                Insurance required
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="toolsProvided">
+                                <span class="checkmark"></span>
+                                Tools will be provided
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline">Save Draft</button>
+                    <button type="submit" class="btn btn-primary">Post Job Request</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="request.js"></script>
+<script src="../../assets/js/theme.js"></script>
 </body>
 </html>

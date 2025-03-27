@@ -1,0 +1,354 @@
+/* Reuse dashboard styles */
+@import url('../../dashboard/owner/dashboard.css');
+
+.request-content {
+    padding: 2rem;
+}
+
+.request-header {
+    margin-bottom: 2rem;
+}
+
+.request-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.request-header p {
+    color: var(--dark-gray);
+}
+
+.request-form {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-color);
+    border-radius: var(--radius);
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.1);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-group span {
+    position: absolute;
+    left: 0.75rem;
+    color: var(--dark-gray);
+}
+
+.input-group input {
+    padding-left: 2rem;
+}
+
+.input-icon {
+    position: absolute;
+    right: 0.75rem;
+    width: 20px;
+    height: 20px;
+}
+
+.property-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.property-option {
+    flex: 1;
+    min-width: 250px;
+}
+
+.property-option input[type="radio"] {
+    display: none;
+}
+
+.property-option label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--gray-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.property-option input[type="radio"]:checked + label {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 107, 255, 0.05);
+}
+
+.property-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-info h4 {
+    margin-bottom: 0.25rem;
+}
+
+.property-info p {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.add-property {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 92px;
+    width: 100%;
+    max-width: 250px;
+    border: 2px dashed var(--gray-color);
+    background-color: rgba(74, 107, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.add-property:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 107, 255, 0.1);
+}
+
+.add-property span {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.upload-area {
+    border: 2px dashed var(--gray-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 107, 255, 0.05);
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.upload-area p {
+    margin-bottom: 0.5rem;
+}
+
+.upload-area .small {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+}
+
+.upload-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.upload-item {
+    position: relative;
+    height: 120px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.upload-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-item .remove-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--light-color);
+    border: 1px solid var(--gray-color);
+    border-radius: var(--radius-sm);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: var(--gray-color);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .request-content {
+        padding: 1rem;
+    }
+
+    .request-form {
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .property-selection {
+        flex-direction: column;
+    }
+
+    .property-option {
+        min-width: 100%;
+    }
+
+    .add-property {
+        max-width: 100%;
+    }
+}

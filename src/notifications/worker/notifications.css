@@ -1,5 +1,5 @@
 /* Reuse dashboard styles */
-@import url('../dashboard/worker/dashboard.css');
+@import url('../../dashboard/worker/dashboard.css');
 
 .notifications-content {
     padding: 2rem;
